@@ -19,6 +19,8 @@ function App() {
 
     setIsLoggedIn(false)
   }
+
+  
   function checkInformation() {
     console.log(sessionStorage.getItem("uid"));
     if (sessionStorage.getItem("uid") && sessionStorage.getItem("display")) {
