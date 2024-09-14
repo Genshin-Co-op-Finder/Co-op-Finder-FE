@@ -1,5 +1,5 @@
 import "./App.css";
-import Home from "../Home/Home";
+import Home from "../Home/Home"
 import { useEffect, useState } from "react";
 
 function App() {
