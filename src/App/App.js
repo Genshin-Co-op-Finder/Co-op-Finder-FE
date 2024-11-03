@@ -52,7 +52,7 @@ function App() {
           </form>
         ) : (
           <>
-            <h2>{display}</h2>
+            <h2>Welcome: {display}</h2>
             <h2>{uid}</h2>
             <button onClick={logout}>Change Uid & Display</button>
           </>
