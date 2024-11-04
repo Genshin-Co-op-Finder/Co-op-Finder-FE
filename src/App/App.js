@@ -16,7 +16,7 @@ function App() {
   }
 
   function logout(){
-
+    sessionStorage.clear()
     setIsLoggedIn(false)
   }
 
@@ -39,23 +39,26 @@ function App() {
       <header>
         <h1>Co-op Finder</h1>
         {!isLoggedIn ? (
-          <form
+          <form className="loginForm"
             onSubmit={(e) => {
               e.preventDefault();
               saveForm(e);
             }}
           >
-            <h2>Please enter your uid and display name before starting</h2>
+            <h2>Please log in before starting</h2>
+            <div className="uidInput">
             <input type="number" placeholder="UID" required></input>
             <input type="text" placeholder="Display Name" required></input>
-            <button>Confirm</button>
+            <button id="loginButton">Confirm</button>
+            </div>
           </form>
         ) : (
-          <>
-            <h2>Welcome: {display}</h2>
+          <div className="displayInformation">
+            <h2>{display}</h2>
             <h2>{uid}</h2>
-            <button onClick={logout}>Change Uid & Display</button>
-          </>
+            <button id="loginButton" onClick={logout}>Change Uid & Display</button>
+          </div>
+      
         )}
       </header>
       <body>

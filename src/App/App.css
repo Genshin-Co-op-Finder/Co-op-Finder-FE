@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+
+header{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding:4vh;
+  display: flex;
+  justify-content: space-between ;
+  background-color: #ccDDc0;
+  align-items: center;
+  height: 8vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  margin: 0;
+  font-size: 6vh;
+}
+h2{
+  font-size: 3vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loginForm{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 40%;
+}
+
+.uidInput{
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  text-overflow: clip;
+}
+input{
+  height: 3vh;
+  border:none;
+  border-radius: 5%;
+}
+#loginButton{
+  border:none;
+  background-color:black;
   color: white;
+  width: 15vh;
+  border-radius: 5%;
 }
-
-.App-link {
-  color: #61dafb;
+.displayInformation
+h2
+{
+  margin:0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.displayInformation
+button{
+  font-size: 2vh;
+}
+.displayInformation{
+  margin-right:3%;
+  text-overflow: clip;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
 }
