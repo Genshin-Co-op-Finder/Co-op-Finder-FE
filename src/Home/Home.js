@@ -1,3 +1,4 @@
+import "./Home.css";
 import { useEffect, useState } from "react";
 
 function Home() {
@@ -33,7 +34,7 @@ function Home() {
         <p>Host : {lobby.displayName}-{lobby.uid}</p>
         <p>Players in lobby : {lobby.playersJoin}/{lobby.playersMax}</p>
         <p>Tags : {displayTags(lobby.tags)}</p>
-        <button onClick={joinLobby(lobby.id)}>Join</button>
+        <button onClick={()=>joinLobby(lobby.id)}>Join</button>
       </div>
     ));
   }
@@ -80,14 +81,17 @@ function Home() {
 
   return (
     <>
-      <div className="filter-bar">
-        <button>Create Lobby</button>
-        <button onClick={() => activateFilter("friendship")}>Friendship</button>
-        <button onClick={() => activateFilter("worldBoss")}>World Bosses</button>
-        <button onClick={() => activateFilter("kath")}>Kath / Dailes</button>
-        <button onClick={() => activateFilter("domain")}>Domains</button>
-        <button onClick={() => activateFilter("weeklyBoss")}>Weekly Bosses</button>
+      <div className="filterBar">
+        <button id="createLobbyBtn">Create Lobby</button>
+        <aside className="filters">
+          <button className="tab-button" id="friendshipBtn" onClick={() => activateFilter("friendship")}>Friendship</button>
+          <button className="tab-button" id="worldBossBtn" onClick={() => activateFilter("worldBoss")}>World Bosses</button>
+          <button className="tab-button" id="kathBtn" onClick={() => activateFilter("kath")}>Kath / Dailies</button>
+          <button className="tab-button" id="domainBtn" onClick={() => activateFilter("domain")}>Domains</button>
+          <button className="tab-button" id="weeklyBossBtn" onClick={() => activateFilter("weeklyBoss")}>Weekly Bosses</button>
+        </aside>
         <input
+          id="searchbar"
           placeholder="Search..."
           type="text"
           onChange={(e) => setSearch(e.target.value)}
