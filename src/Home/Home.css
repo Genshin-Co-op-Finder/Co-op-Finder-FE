@@ -1,9 +1,8 @@
 .filterBar {
     display: flex;
-    width: 100%;
     justify-content: space-evenly;
     padding: 1%;
-    background-color: #F4F6F7;
+    background-color: #bec1c4;
     border-radius: 2%;
     align-items: center;
   }
@@ -51,11 +50,66 @@
   }
   
   #searchbar {
-    width: 20vh;
+    width: 40vh;
     height: 4vh;
     padding: 0.5em;
     border-radius: 2%;
     border: 1px solid #A3B8C6;
     font-size: 1.6vh;
   }
-  
+  .lobby {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 40vh;
+    background-color: #ccDDc0;
+    border-radius: 5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 1.5vh;
+}
+
+.lobby:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.lobby h3 {
+    font-size: 2.5vh;
+    color: #2B3A42;
+    margin-bottom: 1vh;
+}
+
+.lobby p {
+    font-size: 1.8vh;
+    color: #2B3A42;
+    margin: 0.5vh 0;
+}
+
+.joinBtn {
+    width: 80%;
+    height: 5vh;
+    font-size: 2vh;
+    color: white;
+    background-color: #82A9BF;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.joinBtn:hover {
+    background-color: #5A8AA3;
+}
+
+.lobby-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr));
+    gap: 2vh;
+    padding: 2vh;
+    justify-content: space-around;
+}
