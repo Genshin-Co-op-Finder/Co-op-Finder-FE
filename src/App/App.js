@@ -1,9 +1,10 @@
 import "./App.css";
 import Home from "../Home/Home";
 import { useEffect, useState } from "react";
+import { Route, Routes, useNavigate,Link } from "react-router-dom";
 
 function App() {
-  const [uid, setUid] = useState(null);
+  const [uid, setUid] = useState(null)  ;
   const [display, setDisplay] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -62,9 +63,21 @@ function App() {
           </div>
         )}
       </header>
-      <body>{isLoggedIn ? <Home /> : <> <h2>Please log in To see current lobbies </h2></>}</body>
+      <body>
+        {isLoggedIn ? (
+          <Home />
+        ) : (
+          <>
+            {" "}
+            <h2>Please log in To see current lobbies </h2>
+          </>
+        )}
+      </body>
+      <Routes>
+      <Route path="/" element={<Home />} />
+      
+      </Routes>
     </>
   );
 }
-
 export default App;

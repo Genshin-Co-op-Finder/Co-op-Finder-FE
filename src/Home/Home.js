@@ -6,14 +6,6 @@ function Home() {
   const [search, setSearch] = useState("");
   const [lobbies, setLobbies] = useState([
     {
-      title: "CosmicConquerors",
-      displayName: "Player1",
-      uid: "user1",
-      playersJoin: 3,
-      playersMax: 5,
-      tags: ["friendship"],
-    },
-    {
       title: "PhantomSquad",
       displayName: "Player2",
       uid: "user2",
